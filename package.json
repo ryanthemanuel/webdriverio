@@ -39,7 +39,6 @@
     "copy:packagejson": "cpx package.json build",
     "copy:ejstemplate": "cpx lib/helpers/wdio.conf.ejs build/lib/helpers/",
     "eslint": "eslint ./lib test/",
-    "prepare": "npm run build",
     "release": "np patch",
     "release:patch": "np patch",
     "release:minor": "np minor",
@@ -57,7 +56,7 @@
     "test:unit": "mocha test/setup-unit.js test/spec/unit/*.js",
     "test:wdio": "mocha test/setup-unit.js test/spec/wdio/*.js",
     "postversion": "run-s build",
-    "prepare": "npm prune",
+    "prepare": "npm run build",
     "watch": "npm run compile:lib -- --watch"
   },
   "dependencies": {
