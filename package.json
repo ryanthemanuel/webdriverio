@@ -39,6 +39,7 @@
     "copy:packagejson": "cpx package.json build",
     "copy:ejstemplate": "cpx lib/helpers/wdio.conf.ejs build/lib/helpers/",
     "eslint": "eslint ./lib test/",
+    "prepare": "npm run build",
     "release": "np patch",
     "release:patch": "np patch",
     "release:minor": "np minor",
